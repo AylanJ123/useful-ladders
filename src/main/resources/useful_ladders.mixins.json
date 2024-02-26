@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.aylanj123.usefulladders.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "useful_ladders.refmap.json",
+  "server": [
+  ],
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8",
+  "priority": 99999
+}
