@@ -1,7 +1,7 @@
 package com.aylanj123.usefulladders;
 
 public enum LangKeys {
-    NAME("KEY");
+    ITEM_ROPE_LADDER("items.rope_ladder");
 
     private final String key;
 

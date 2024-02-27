@@ -1,6 +1,6 @@
 package com.aylanj123.usefulladders;
 
-import com.aylanj123.usefulladders.items.RopedLadder;
+import com.aylanj123.usefulladders.items.RopeLadder;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -17,7 +17,7 @@ public class Registry {
 
     public static final RegistryObject<BlockItem> VANILLA_LADDER = VANILLA_ITEMS.register("ladder", () -> new BlockItem(Blocks.LADDER, new Item.Properties().rarity(Rarity.COMMON).stacksTo(128)));
 
-    public static final RegistryObject<Item> ROPED_LADDER = ITEMS.register("roped_ladder", () -> new RopedLadder(new Item.Properties()));
+    public static final RegistryObject<Item> ROPED_LADDER = ITEMS.register("rope_ladder", () -> new RopeLadder(new Item.Properties()));
 
     public static void register(IEventBus bus) {
         ITEMS.register(bus);

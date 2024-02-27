@@ -1,64 +1,64 @@
-[27Feb2024 00:56:57.136] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\aylan\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.20, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, useful_ladders, --all, --output, D:\Modding\Minecraft\Mods\Useful Ladders\src\generated\resources, --existing, D:\Modding\Minecraft\Mods\Useful Ladders\src\main\resources, --mixin.config, useful_ladders.mixins.json]
-[27Feb2024 00:56:57.140] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
-[27Feb2024 00:56:57.253] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[27Feb2024 00:56:57.307] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/aylan/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[27Feb2024 00:56:57.622] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.20\918959a037ab7191a0c45a359f4746ab76c110c3\javafmllanguage-1.20.1-47.2.20.jar is missing mods.toml file
-[27Feb2024 00:56:57.626] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.20\c1d1efcb98e8bfcf3dbfed0d1e81b55b648b86bf\lowcodelanguage-1.20.1-47.2.20.jar is missing mods.toml file
-[27Feb2024 00:56:57.629] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.20\efca3bee89c0085192b122d47334692b921ca7d1\mclanguage-1.20.1-47.2.20.jar is missing mods.toml file
-[27Feb2024 00:56:57.635] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.20\12cd436f148405b50c9b16bd8f3cc6f18db89824\fmlcore-1.20.1-47.2.20.jar is missing mods.toml file
-[27Feb2024 00:56:57.732] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[27Feb2024 00:56:58.818] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[27Feb2024 00:56:58.823] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\aylan\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, useful_ladders, --all, --output, D:\Modding\Minecraft\Mods\Useful Ladders\src\generated\resources, --existing, D:\Modding\Minecraft\Mods\Useful Ladders\src\main\resources]
-[27Feb2024 00:56:58.890] [main/WARN] [mixin/]: Reference map 'useful_ladders.refmap.json' for useful_ladders.mixins.json could not be read. If this is a development environment you can ignore this message
-[27Feb2024 00:56:59.150] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [useful_ladders]
-[27Feb2024 00:57:02.910] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.20, for MC 1.20.1 with MCP 20230612.114412
-[27Feb2024 00:57:02.911] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.20 Initialized
-[27Feb2024 00:57:03.177] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[27Feb2024 00:57:03.182] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.943 ms
-[27Feb2024 00:57:03.448] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[27Feb2024 00:57:03.448] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[27Feb2024 00:57:03.559] [main/INFO] [com.aylanj123.usefulladders.UsefulLaddersMod/]: Generating new data
-[27Feb2024 00:57:03.583] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us
-[27Feb2024 00:57:03.587] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us finished after 3 ms
-[27Feb2024 00:57:03.587] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_nz
-[27Feb2024 00:57:03.587] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_nz finished after 0 ms
-[27Feb2024 00:57:03.587] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_gb
-[27Feb2024 00:57:03.587] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_gb finished after 0 ms
-[27Feb2024 00:57:03.587] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_ca
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_ca finished after 0 ms
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_au
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_au finished after 0 ms
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ve
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ve finished after 0 ms
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_uy
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_uy finished after 0 ms
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_mx
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_mx finished after 0 ms
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_es
-[27Feb2024 00:57:03.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_es finished after 0 ms
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ec
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ec finished after 0 ms
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_cl
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_cl finished after 0 ms
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ar
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ar finished after 0 ms
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_de
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_de finished after 0 ms
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_at
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_at finished after 0 ms
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_ch
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_ch finished after 0 ms
-[27Feb2024 00:57:03.589] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: nds_de
-[27Feb2024 00:57:03.590] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: nds_de finished after 0 ms
-[27Feb2024 00:57:03.590] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: pt_pt
-[27Feb2024 00:57:03.590] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: pt_pt finished after 0 ms
-[27Feb2024 00:57:03.590] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: pt_br
-[27Feb2024 00:57:03.590] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: pt_br finished after 0 ms
-[27Feb2024 00:57:03.590] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: sv_se
-[27Feb2024 00:57:03.590] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: sv_se finished after 0 ms
-[27Feb2024 00:57:03.590] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[27Feb2024 00:57:03.617] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 26 ms
-[27Feb2024 00:57:03.617] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: useful_ladders
-[27Feb2024 00:57:03.624] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: useful_ladders finished after 6 ms
-[27Feb2024 00:57:03.624] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 40 ms
-[27Feb2024 00:57:03.629] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 5, old count: 5, new count: 6, removed stale: 0, written: 0
+[27Feb2024 02:31:44.880] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\aylan\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.20, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, useful_ladders, --all, --output, D:\Modding\Minecraft\Mods\Useful Ladders\src\generated\resources, --existing, D:\Modding\Minecraft\Mods\Useful Ladders\src\main\resources, --mixin.config, useful_ladders.mixins.json]
+[27Feb2024 02:31:44.884] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
+[27Feb2024 02:31:44.992] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[27Feb2024 02:31:45.052] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/aylan/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[27Feb2024 02:31:45.366] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.20\918959a037ab7191a0c45a359f4746ab76c110c3\javafmllanguage-1.20.1-47.2.20.jar is missing mods.toml file
+[27Feb2024 02:31:45.372] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.20\c1d1efcb98e8bfcf3dbfed0d1e81b55b648b86bf\lowcodelanguage-1.20.1-47.2.20.jar is missing mods.toml file
+[27Feb2024 02:31:45.375] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.20\efca3bee89c0085192b122d47334692b921ca7d1\mclanguage-1.20.1-47.2.20.jar is missing mods.toml file
+[27Feb2024 02:31:45.380] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.20\12cd436f148405b50c9b16bd8f3cc6f18db89824\fmlcore-1.20.1-47.2.20.jar is missing mods.toml file
+[27Feb2024 02:31:45.470] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[27Feb2024 02:31:47.105] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[27Feb2024 02:31:47.110] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\aylan\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, useful_ladders, --all, --output, D:\Modding\Minecraft\Mods\Useful Ladders\src\generated\resources, --existing, D:\Modding\Minecraft\Mods\Useful Ladders\src\main\resources]
+[27Feb2024 02:31:47.186] [main/WARN] [mixin/]: Reference map 'useful_ladders.refmap.json' for useful_ladders.mixins.json could not be read. If this is a development environment you can ignore this message
+[27Feb2024 02:31:47.508] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [useful_ladders]
+[27Feb2024 02:31:52.137] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.20, for MC 1.20.1 with MCP 20230612.114412
+[27Feb2024 02:31:52.138] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.20 Initialized
+[27Feb2024 02:31:52.352] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[27Feb2024 02:31:52.358] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 3.773 ms
+[27Feb2024 02:31:52.628] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[27Feb2024 02:31:52.629] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[27Feb2024 02:31:52.780] [main/INFO] [com.aylanj123.usefulladders.UsefulLaddersMod/]: Generating new data
+[27Feb2024 02:31:52.805] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us
+[27Feb2024 02:31:52.811] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us finished after 5 ms
+[27Feb2024 02:31:52.812] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_nz
+[27Feb2024 02:31:52.812] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_nz finished after 0 ms
+[27Feb2024 02:31:52.812] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_gb
+[27Feb2024 02:31:52.812] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_gb finished after 0 ms
+[27Feb2024 02:31:52.812] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_ca
+[27Feb2024 02:31:52.813] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_ca finished after 0 ms
+[27Feb2024 02:31:52.813] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_au
+[27Feb2024 02:31:52.813] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_au finished after 0 ms
+[27Feb2024 02:31:52.813] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ve
+[27Feb2024 02:31:52.813] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ve finished after 0 ms
+[27Feb2024 02:31:52.813] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_uy
+[27Feb2024 02:31:52.814] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_uy finished after 0 ms
+[27Feb2024 02:31:52.814] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_mx
+[27Feb2024 02:31:52.814] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_mx finished after 0 ms
+[27Feb2024 02:31:52.814] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_es
+[27Feb2024 02:31:52.814] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_es finished after 0 ms
+[27Feb2024 02:31:52.814] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ec
+[27Feb2024 02:31:52.814] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ec finished after 0 ms
+[27Feb2024 02:31:52.815] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_cl
+[27Feb2024 02:31:52.815] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_cl finished after 0 ms
+[27Feb2024 02:31:52.815] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ar
+[27Feb2024 02:31:52.815] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ar finished after 0 ms
+[27Feb2024 02:31:52.815] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_de
+[27Feb2024 02:31:52.815] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_de finished after 0 ms
+[27Feb2024 02:31:52.815] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_at
+[27Feb2024 02:31:52.816] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_at finished after 0 ms
+[27Feb2024 02:31:52.816] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_ch
+[27Feb2024 02:31:52.816] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_ch finished after 0 ms
+[27Feb2024 02:31:52.816] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: nds_de
+[27Feb2024 02:31:52.816] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: nds_de finished after 0 ms
+[27Feb2024 02:31:52.816] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: pt_pt
+[27Feb2024 02:31:52.817] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: pt_pt finished after 0 ms
+[27Feb2024 02:31:52.817] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: pt_br
+[27Feb2024 02:31:52.817] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: pt_br finished after 0 ms
+[27Feb2024 02:31:52.817] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: sv_se
+[27Feb2024 02:31:52.817] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: sv_se finished after 0 ms
+[27Feb2024 02:31:52.817] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[27Feb2024 02:31:52.844] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 26 ms
+[27Feb2024 02:31:52.844] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: useful_ladders
+[27Feb2024 02:31:52.849] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: useful_ladders finished after 4 ms
+[27Feb2024 02:31:52.849] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 44 ms
+[27Feb2024 02:31:52.853] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 22, old count: 22, new count: 23, removed stale: 0, written: 0
