@@ -22,7 +22,7 @@ public class Config
                 .comment("Max amount of ladders that can be put upwards hanging from a strongly placed one (On sturdy blocks). Set to -1 to make infinite or 0 to deactivate feature.")
                 .define("maxHang", -1);
         RECOVERY_CHANCE = SERVER_BUILDER
-                .comment("Chances of being able of recovery the spent string when placing Roped Ladders. By default is 1/10 and it's slightly lossy. Else, it might become a string generator based on RNG.")
+                .comment("Chances of being able to recover the spent string when placing Roped Ladders. By default is 1/10 and it's slightly lossy. Else, it might become a string generator based on RNG.")
                 .define("recoveryChance", 0.1f);
         INVENTORY_RECOVERY = SERVER_BUILDER
                 .comment("Players will recover the string directly into their inventories instead of having it fall from the ladder.")

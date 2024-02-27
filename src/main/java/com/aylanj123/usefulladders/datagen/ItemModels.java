@@ -14,7 +14,7 @@ public class ItemModels extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(new ResourceLocation(UsefulLaddersMod.MODID, "roped_ladder"));
+        basicItem(new ResourceLocation(UsefulLaddersMod.MODID, "rope_ladder"));
     }
 
 }

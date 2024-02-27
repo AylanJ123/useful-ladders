@@ -20,7 +20,7 @@ public class UsefulLaddersMod
     public UsefulLaddersMod()
     {
         MinecraftForge.EVENT_BUS.register(ServerEventHandler.ServerForgeEvents.class);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC, "useful_ladders.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC, MODID + "-server.toml");
         Registry.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 

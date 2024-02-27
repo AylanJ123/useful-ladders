@@ -93,8 +93,6 @@ public abstract class LadderBlockMixin {
         else {
             if (pState.getValue(WATERLOGGED))
                 pLevel.scheduleTick(pCurrentPos, Fluids.WATER, Fluids.WATER.getTickDelay(pLevel));
-            pLevel.scheduleTick(pCurrentPos.above(), Blocks.LADDER, 1);
-            pLevel.scheduleTick(pCurrentPos.below(), Blocks.LADDER, 1);
             return pState;
         }
     }
@@ -114,7 +112,11 @@ public abstract class LadderBlockMixin {
     public boolean usefulLadders$checkForHangingSupport(int i, BlockState ladderState, LevelReader level, BlockPos lastPos) {
         if (Config.maxHang != -1 && ++i > Config.maxHang) return false;
         BlockPos posToCheck = lastPos.above();
-        if (level.getBlockState(posToCheck) != ladderState) return false;
+        BlockState stateToCheck = level.getBlockState(posToCheck);
+        if (
+            stateToCheck.getBlock() != Blocks.LADDER ||
+            stateToCheck.getValue(LadderBlock.FACING) != ladderState.getValue(LadderBlock.FACING)
+        ) return false;
         if (!usefulLadders$hasSturdySupport(ladderState, level, posToCheck))
             return usefulLadders$checkForHangingSupport(i, ladderState, level, posToCheck);
         return true;
@@ -129,7 +131,11 @@ public abstract class LadderBlockMixin {
     public boolean usefulLadders$checkForStressedSupport(int i, BlockState ladderState, LevelReader level, BlockPos lastPos) {
         if (Config.maxStress != -1 && ++i > Config.maxStress) return false;
         BlockPos posToCheck = lastPos.below();
-        if (level.getBlockState(posToCheck) != ladderState) return false;
+        BlockState stateToCheck = level.getBlockState(posToCheck);
+        if (
+            stateToCheck.getBlock() != Blocks.LADDER ||
+            stateToCheck.getValue(LadderBlock.FACING) != ladderState.getValue(LadderBlock.FACING)
+        ) return false;
         if (!usefulLadders$hasSturdySupport(ladderState, level, posToCheck))
             return usefulLadders$checkForStressedSupport(i, ladderState, level, posToCheck);
         return true;

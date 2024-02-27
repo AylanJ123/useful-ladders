@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class ServerEventHandler {
@@ -22,11 +23,14 @@ public class ServerEventHandler {
         }
 
         @SubscribeEvent
-        static void playerInteract(PlayerInteractEvent event) {
+        static void playerInteract(PlayerInteractEvent.RightClickBlock event) {
             if (event.getItemStack().getItem() != Items.LADDER) return;
             BlockState state = event.getLevel().getBlockState(event.getPos());
             if (state.getBlock() != Blocks.LADDER) return;
-            Helpers.placeLadder(event.getPos(), event.getLevel(), state, Direction.UP);
+            if (!event.getLevel().isClientSide) {
+                Helpers.RecursiveResult result = Helpers.placeLadder(event.getPos(), event.getLevel(), state, Direction.UP);
+                if (result.success && !event.getEntity().isCreative()) event.getItemStack().setCount(event.getItemStack().getCount() - 1);
+            }
         }
 
     }

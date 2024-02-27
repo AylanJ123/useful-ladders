@@ -77,19 +77,6 @@ public class CommonEventHandler {
             gen.addProvider(event.includeClient(), new ItemModels(output, helper));
         }
 
-        @SubscribeEvent
-        static void commonSetUp(FMLCommonSetupEvent event) {
-            UsefulLaddersMod.LOGGER.info("Common Set Up");
-        }
-
-        private void addCreative(BuildCreativeModeTabContentsEvent event)
-        {
-            if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-                event.accept(Registry.VANILLA_LADDER);
-                event.accept(Registry.ROPED_LADDER);
-            }
-        }
-
     }
 
 }
