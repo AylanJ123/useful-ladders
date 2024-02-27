@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "roped_big",
+  "key": {
+    "L": {
+      "item": "minecraft:ladder"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "LSL",
+    "LLL"
+  ],
+  "result": {
+    "count": 8,
+    "item": "useful_ladders:roped_ladder"
+  },
+  "show_notification": true
+}

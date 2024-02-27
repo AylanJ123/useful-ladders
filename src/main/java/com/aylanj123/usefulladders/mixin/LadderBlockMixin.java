@@ -3,30 +3,50 @@ package com.aylanj123.usefulladders.mixin;
 import com.aylanj123.usefulladders.Config;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.server.level.WorldGenRegion;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.spongepowered.asm.mixin.*;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LadderBlock.class)
 public abstract class LadderBlockMixin {
 
     @Shadow @Final public static DirectionProperty FACING;
-
+    @Shadow @Final public static BooleanProperty WATERLOGGED;
     @Shadow protected abstract boolean canAttachTo(BlockGetter pBlockReader, BlockPos pPos, Direction pDirection);
 
-    @Shadow @Final public static BooleanProperty WATERLOGGED;
+    @Unique
+    private static final VoxelShape NEW_EAST_AABB = Block.box(1.0D, 0.0D, 0.0D, 3.0D, 16.0D, 16.0D);
+    @Unique
+    private static final VoxelShape NEW_WEST_AABB = Block.box(13.0D, 0.0D, 0.0D, 15.0D, 16.0D, 16.0D);
+    @Unique
+    private static final VoxelShape NEW_SOUTH_AABB = Block.box(0.0D, 0.0D, 1.0D, 16.0D, 16.0D, 3.0D);
+    @Unique
+    private static final VoxelShape NEW_NORTH_AABB = Block.box(0.0D, 0.0D, 13.0D, 16.0D, 16.0D, 15.0D);
+
+    /**
+     * @author AylanJ123
+     * @reason Modified the box of the ladders
+     */
+    @Overwrite
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        return switch (pState.getValue(FACING)) {
+            case NORTH -> NEW_NORTH_AABB;
+            case SOUTH -> NEW_SOUTH_AABB;
+            case WEST -> NEW_WEST_AABB;
+            default -> NEW_EAST_AABB;
+        };
+    }
 
     /**
      * @author AylanJ123
@@ -73,6 +93,8 @@ public abstract class LadderBlockMixin {
         else {
             if (pState.getValue(WATERLOGGED))
                 pLevel.scheduleTick(pCurrentPos, Fluids.WATER, Fluids.WATER.getTickDelay(pLevel));
+            pLevel.scheduleTick(pCurrentPos.above(), Blocks.LADDER, 1);
+            pLevel.scheduleTick(pCurrentPos.below(), Blocks.LADDER, 1);
             return pState;
         }
     }

@@ -1,14 +1,23 @@
 package com.aylanj123.usefulladders.eventhandler;
+import com.aylanj123.usefulladders.Registry;
 import com.aylanj123.usefulladders.UsefulLaddersMod;
-import com.aylanj123.usefulladders.language.*;
-import net.minecraft.data.DataProvider;
+import com.aylanj123.usefulladders.datagen.language.*;
+import com.aylanj123.usefulladders.datagen.ItemModels;
+import com.aylanj123.usefulladders.datagen.Recipes;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public class CommonEventHandler {
 
@@ -33,41 +42,52 @@ public class CommonEventHandler {
 
         @SubscribeEvent
         static void gatherData(GatherDataEvent event) {
+            UsefulLaddersMod.LOGGER.info("Generating new data");
+            DataGenerator gen = event.getGenerator();
+            PackOutput output = gen.getPackOutput();
+            ExistingFileHelper helper = event.getExistingFileHelper();
+            CompletableFuture<HolderLookup.Provider> lookUp = event.getLookupProvider();
+
             for (String locale : englishLocales)
-                event.getGenerator().addProvider(
-                        event.includeClient(),
-                        (DataProvider.Factory<EnglishLanguageProvider>)
-                                output -> new EnglishLanguageProvider(output, locale)
+                gen.addProvider(
+                    event.includeClient(),
+                    new EnglishLanguageProvider(output, locale)
                 );
             for (String locale : spanishLocales)
-                event.getGenerator().addProvider(
-                        event.includeClient(),
-                        (DataProvider.Factory<SpanishLanguageProvider>)
-                                output -> new SpanishLanguageProvider(output, locale)
+                gen.addProvider(
+                    event.includeClient(),
+                    new SpanishLanguageProvider(output, locale)
                 );
             for (String locale : germanLocales)
-                event.getGenerator().addProvider(
-                        event.includeClient(),
-                        (DataProvider.Factory<GermanLanguageProvider>)
-                                output -> new GermanLanguageProvider(output, locale)
+                gen.addProvider(
+                    event.includeClient(),
+                    new GermanLanguageProvider(output, locale)
                 );
             for (String locale : portugueseLocales)
-                event.getGenerator().addProvider(
-                        event.includeClient(),
-                        (DataProvider.Factory<PortugueseLanguageProvider>)
-                                output -> new PortugueseLanguageProvider(output, locale)
-                );
-            event.getGenerator().addProvider(
+                gen.addProvider(
                     event.includeClient(),
-                    (DataProvider.Factory<SwedishLanguageProvider>)
-                            output -> new SwedishLanguageProvider(output, "sv_se")
+                    new PortugueseLanguageProvider(output, locale)
+                );
+            gen.addProvider(
+                event.includeClient(),
+                new SwedishLanguageProvider(output, "sv_se")
             );
-            UsefulLaddersMod.LOGGER.info("Generating new data");
+
+            gen.addProvider(event.includeServer(), new Recipes(output));
+            gen.addProvider(event.includeClient(), new ItemModels(output, helper));
         }
 
         @SubscribeEvent
         static void commonSetUp(FMLCommonSetupEvent event) {
             UsefulLaddersMod.LOGGER.info("Common Set Up");
+        }
+
+        private void addCreative(BuildCreativeModeTabContentsEvent event)
+        {
+            if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+                event.accept(Registry.VANILLA_LADDER);
+                event.accept(Registry.ROPED_LADDER);
+            }
         }
 
     }

@@ -6,6 +6,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 @Mod(UsefulLaddersMod.MODID)
@@ -19,8 +20,8 @@ public class UsefulLaddersMod
     public UsefulLaddersMod()
     {
         MinecraftForge.EVENT_BUS.register(ServerEventHandler.ServerForgeEvents.class);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC, "afk_command-server.toml");
-//        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_SPEC, "afk_command-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC, "useful_ladders.toml");
+        Registry.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
 }

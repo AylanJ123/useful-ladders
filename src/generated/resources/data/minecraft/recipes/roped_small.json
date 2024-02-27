@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "roped_small",
+  "ingredients": [
+    {
+      "item": "minecraft:ladder"
+    },
+    {
+      "item": "minecraft:ladder"
+    },
+    {
+      "item": "minecraft:ladder"
+    },
+    {
+      "item": "minecraft:string"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "useful_ladders:roped_ladder"
+  }
+}
